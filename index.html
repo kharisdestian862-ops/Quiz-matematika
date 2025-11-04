@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Duel Matematika</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- MENU UTAMA -->
+      <div class="menu" id="menu">
+        <h1>🎯 Kuis Duel Matematika</h1>
+        <p>Pilih tingkat dan jumlah soal</p>
+
+        <div class="controls">
+          <select id="level">
+            <option value="sd">SD</option>
+            <option value="smp">SMP</option>
+            <option value="sma">SMA</option>
+          </select>
+
+          <select id="jumlah">
+            <option value="5">5 Soal</option>
+            <option value="10">10 Soal</option>
+            <option value="15">15 Soal</option>
+            <option value="20">20 Soal</option>
+          </select>
+
+          <button id="mulai" class="btn primary">Mulai</button>
+        </div>
+      </div>
+
+      <!-- GAME -->
+      <div class="game hidden" id="game">
+        <div class="board">
+          <!-- Pemain 1 -->
+          <div class="side">
+            <h3>Pemain 1</h3>
+            <div class="meta">Skor</div>
+            <div class="score" id="score1">0</div>
+            <div class="calc">
+              <div class="display" id="display1">0</div>
+              <div class="keys">
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key">-</div>
+                <div class="key del">Del</div>
+                <div class="key">0</div>
+                <div class="key go">OK</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arena Tengah -->
+          <div class="center-area">
+            <div class="arena">
+              <div class="rope-line"></div>
+              <div class="ball-wrap">
+                <div class="ball" id="ball"></div>
+              </div>
+            </div>
+            <div class="question" id="question">Tekan OK untuk mulai!</div>
+            <div class="feedback" id="feedback"></div>
+            <div class="footer">
+              <div class="round" id="round">Soal: 0</div>
+            </div>
+          </div>
+
+          <!-- Pemain 2 -->
+          <div class="side">
+            <h3>Pemain 2</h3>
+            <div class="meta">Skor</div>
+            <div class="score" id="score2">0</div>
+            <div class="calc">
+              <div class="display" id="display2">0</div>
+              <div class="keys">
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+                <div class="key">-</div>
+                <div class="key del">Del</div>
+                <div class="key">0</div>
+                <div class="key go">OK</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POPUP HASIL -->
+      <div class="popup hidden" id="popup">
+        <div class="popup-content">
+          <h2 id="hasil-title">Hasil Akhir</h2>
+          <p id="hasil-text"></p>
+          <button id="kembali" class="btn big">Kembali ke Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
